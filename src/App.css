@@ -1,5 +1,10 @@
-.App {
+body, h4 {
   text-align: center;
+  font-family: helvetica;
+}
+
+footer {
+  background-color: #FBDABB;
 }
 
 .App-logo {
@@ -35,4 +40,138 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  padding: 8px;
+  text-decoration: none;
+  color: inherit; 
+}
+
+header {
+  border-bottom: solid 1px #333333;
+}
+
+.hero-container {
+  background-color: #495E57;
+  margin-bottom: 36px;
+}
+.hero-content{
+  /* height: 40vh; */
+  display: flex;
+  width: 65%;
+  margin: 0 auto;
+  gap: 96px;
+  justify-content: space-evenly;
+  padding: 24px;
+}
+
+.hero-text {
+  /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%; */
+  text-align: left;
+  width: 30%;
+}
+
+.reserve-table-btn {
+  background-color: #F4CE14;
+  border-radius: 8px;
+  margin-top: 12px;
+  width: fit-content;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.hero-title {
+  font-size: 64px;
+  color: #F4CE14;
+}
+
+.hero-subtitle {
+  color: white;
+  font-size: 40px;
+}
+
+.hero-para {
+  /* font-size: 18px; */
+  color: white;
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.hero-image {
+  transform: translateY(45px);
+  border-radius: 8px;
+}
+
+.specials-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.specials-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-container {
+  width: 20%;
+  background-color: #edefee;
+}
+
+.card-container img {
+  width: 100%;
+}
+
+.special-cards {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.card-text {
+  padding: 16px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.card-description {
+  text-align: left;
+  font-size: 14px;
+}
+
+.card-title {
+  font-weight: 700;
+}
+
+.card-container, .card-container img {
+  border-radius: 8px;
+}
+
+footer ul {
+  padding: unset;
+}
+
+.footer-links {
+  display: flex;
+  width: 40%;
+  justify-content: space-evenly;
+}
+
+footer li {
+  padding: 4px;
+}
+
+footer h4 {
+  margin-bottom: 0;
 }
