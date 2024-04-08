@@ -1,3 +1,6 @@
+import { BookingForm } from "./BookingForm";
+import { useState, useEffect } from "react"
+
 const GuestName = () => {
     return (
         <>
@@ -21,26 +24,26 @@ const datePicker = () => {
 }
 
 const occasion = () => {
-
+    
 }
 
-const SpecialComments  = () => {
+// const SpecialComments  = () => {
 
-    return (
-        <textarea>
+//     return (
+//         <textarea>
 
-        </textarea>
-    )
-}
+//         </textarea>
+//     )
+// }
 
 
-export const BookingPage = () => {
+export const BookingPage = ({formvalues, setFormValues, availableTimes, dispatch}) => {
+
     return <>
         <h1>Reserve your table</h1>
-        <section>
-            <GuestName />
-            <GuestsCount/>
-            <SpecialComments/>
+        <section className="booking-section">
+            <BookingForm formvalues={formvalues} setFormValues={setFormValues} availableTimes={availableTimes} dispatch={dispatch}/>
+            {/* <SpecialComments/> */}
         </section>
     </>
 }

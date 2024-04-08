@@ -1,7 +1,7 @@
 import logo from "../assets/Logo.svg"
 
 export const Footer = () => {
-    return <footer style={{"display": "flex", "justify-content": "space-evenly"}}>
+    return <footer style={{"display": "flex", "justifyContent": "space-evenly"}}>
         {/* <div> */}
 
             <img src={logo} alt ="footer-logo"/>

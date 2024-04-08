@@ -3,8 +3,13 @@ body, h4 {
   font-family: helvetica;
 }
 
+main {
+  min-height: calc(100vh - 11rem);
+}
+
 footer {
   background-color: #FBDABB;
+  font-size: 14px;
 }
 
 .App-logo {
@@ -49,7 +54,7 @@ li {
 a {
   padding: 8px;
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
 }
 
 header {
@@ -174,4 +179,9 @@ footer li {
 
 footer h4 {
   margin-bottom: 0;
+}
+
+.booking-section {
+  display: flex;
+  justify-content: center;
 }
