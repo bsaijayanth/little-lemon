@@ -3,6 +3,7 @@ import { useState, useEffect, useReducer } from "react"
 import { HomePage } from "./HomePage";
 import { BookingPage } from "./BookingPage";
 import fakeAPI from '../fakeApi';
+import { ConfirmationPage} from "./ConfirmationPage";
 const { fetchAPI, submitAPI} = fakeAPI;
 
 
@@ -33,7 +34,7 @@ export const Main = () => {
     const [state, dispatch] = useReducer(updateTimes, inititalizeTimes())
 
     const [formvalues, setFormValues] = useState({
-        date: new Date().toLocaleDateString(),
+        date: new Date().toISOString().slice(0,10),
         time: "",
         no_of_guests: 0,
         occasion: "Birthday"
@@ -61,6 +62,7 @@ export const Main = () => {
       <Routes> 
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/booking" element={<BookingPage availableTimes= {availableTimes} dispatch={dispatch} formvalues={formvalues} setFormValues={setFormValues}/>}></Route>
+            <Route path="/confirm" element={<ConfirmationPage formvalues={formvalues} />}></Route>
         </Routes>
     </main>)
 }

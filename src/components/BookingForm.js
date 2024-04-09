@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom";
 
 export const BookingForm = ({formvalues, setFormValues, availableTimes, dispatch}) => {
 
-
+    let navigate = useNavigate();
     const handleDateChange =  e => {
         setFormValues(prevState =>  {
             return {...prevState,
@@ -35,11 +35,16 @@ export const BookingForm = ({formvalues, setFormValues, availableTimes, dispatch
     const handleFormSubmit = (e) => {
         e.preventDefault();
         console.log(formvalues);
+        if(formvalues.time) {
+            navigate("/confirm")
+        } else {
+            alert("please select time of your reservation");
+        }
     }
 
     return (
         <>
-            <form style={{display: "grid",maxWidth:" 200px", gap: "20px"}} onSubmit={handleFormSubmit}>
+            <form style={{display: "grid",maxWidth:" 200px", gap: "20px", padding: "16px", border: "1px solid #495E57"}} onSubmit={handleFormSubmit}>
                 <label htmlFor="res-date">Choose date</label>
                 <input type="date" id="res-date" onChange={handleDateChange} value={formvalues.date} />
                 <label htmlFor="res-time">Choose time</label>

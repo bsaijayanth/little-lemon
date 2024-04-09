@@ -49,7 +49,7 @@ const Cards = () => {
     return (
         <ul className='specials-container'>
             {cardData.map( card => {
-                return (<li className='card-container'>
+                return (<li key={card.title} className='card-container'>
                     <img src={card.img} width={80}/>
                     <div className='card-text'>
                         <div className='price-container'>

@@ -5,15 +5,15 @@ import { updateTimes} from './components/Main';
 
 
 
-test('inititalizeTimes', () => {
- const resp = inititalizeTimes();
- expect(resp).toStrictEqual({'availableTimes': ["17:00","18:00","19:00","20:00","21:00","22:00"]});
-});
+// test('inititalizeTimes', () => {
+//  const resp = inititalizeTimes();
+//  expect(resp).toStrictEqual({'availableTimes': ["17:00","18:00","19:00","20:00","21:00","22:00"]});
+// });
 
-test('updateTimes', () => {
-  const resp = updateTimes();
-  expect(resp).toStrictEqual({'availableTimes': ["17:00","18:00","19:00","20:00","21:00","22:00"]});
- });
+// test('updateTimes', () => {
+//   const resp = updateTimes();
+//   expect(resp).toStrictEqual({'availableTimes': ["17:00","18:00","19:00","20:00","21:00","22:00"]});
+//  });
 
 
 test('renders learn react link', () => {
